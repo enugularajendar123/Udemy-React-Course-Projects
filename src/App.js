@@ -1,4 +1,6 @@
-import Expenses from "./components/Expenses";
+/* eslint-disable no-unused-vars */
+import Expenses from "./components/expenses/Expenses";
+import NewExpense from "./components/NewExpense/newExpense";
 import "./App.css";
 
 function App() {
@@ -24,9 +26,13 @@ function App() {
       expDate: new Date(2023,10,10).toISOString(),
     },
   ];
+  const gettingDataHandler=(data)=>{
+    console.log(data);
+  };
 
   return (
     <div className="App">
+      <NewExpense onGetData={gettingDataHandler}/>
       <Expenses items={expenses} />
 
       {/* <ExcerciseComp>{year}</ExcerciseComp> */}
