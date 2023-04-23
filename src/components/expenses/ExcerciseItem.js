@@ -7,7 +7,7 @@ function ExcerciseComp(props) {
   return (
     <div className="expense-item">
       <div>
-        <Dates newdate={props.date}></Dates>
+        <Dates date={props.date}></Dates>
       </div>
       <div className="expense-item__description">
         <h2>{props.title}</h2>
